@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "robertfrenz-tren",
+  "private_key_id": "1c72907934e9688d4316d1cb63016604f4b34f9e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCdS8PpbSrGZNwx\nu0imoWsL9XgQ9t8v3vQNA8etHUJYRvMuOCTLc/mlSDP8z09N+vmP+eaMWeFNJMra\nqiAUb8wQqTd/RHG3d5RGFvekp1N8T6s/mNNNWmPAQ1NViScYJu1Sl9h9eUEYEJho\nJO5iSfTd5P62R7fsp6lpwbZHDTxvNaOiWAPn/SYReGqMHMDOEtnZKsEi9LU5+MQU\nWYHnn9QZ1O+9U6MttBl1hZy2pP3sC11HICiPU4tBQ7je1ZURXmhd/TGDTOC4OGCP\njyMcy/iVaU1hEe6nTLZoeroMwig5/qu/FNI+7FRZ3tP3kxeaVkEtUkDl05WHd8ev\nZskvSvstAgMBAAECggEARkZzYPbFBZ5KQm3KJ6g2i0FAQ1QIovqZTrdBnrZTzdzl\nCOFMjxlhj9aSY4C7jbtzhD/CITKG1lB50PfxHTBVm5v+j32k0LM8K5RXT9jyE7gE\naoV84jJgHqX1tWFxdfjuTthIgMaLrpS7gsv9NSyVmg2VPxsLsU+3AOjq5xOizIwW\nx75gTunD+MGRB8JwUs2b6ic91MbRam92jEB6vDnJrTFflCW5DAF2QkOdhjhZxRGs\nAk6PURM/XAFkJZLmzVPEmaGxuZnQKiHunxSCWmm/oq/cDI3Ga1CjcBSCd3wKzsb4\n1GsFvR0+KaQSnoBugAQEdiDNf/zFcdfl0tEXZ2bOgQKBgQDVjkKUMnNHf1w8npVT\nQ2+hQ3JQ2c2Ze31Mchd1JsSnY2RZi3vmOUsJwRGzd7i+AjxlYc6n+2DU4mkyrsik\ndce7f/qG8nYG+XeEh3QgSQofJELY7JrkOiZxV25ViWRUvqijo9N+62TXT9oo+OvZ\nSK0+ln3qfAHlSdlR3cALOw9NewKBgQC8jwCpgfh/bEqJnVdf7SODFCdxKO/v8oOS\nh8HZTWgiBRoFx3q8PXs6MvewpNoQX38U0YBZ+KWg+UlQ9+SLC4xyRpf4Ytqun9G1\nsViM6KKQ3rBl8ArhFEHW05Ega+C+Z1Dt2OnOFEXH9dq7wlVu/z4YLvwI6DDEQdbE\n50YgyFK1dwKBgALGuq7aiQ0g5r4TAbX3ZngePFo4uqeIJ3Ta9tsbCetzK1bOrWms\nzQDvdZ9zqv8tYEOhJeKhLf0WhG+YPhuFPHd/jm46sLYegCNE74mL6YnGGuhfCxR0\nfRN0I4cRJjDD2cVm19UKkmEKNLfbpJVKkJYDttdZjVzBvQWHcHu05NoJAoGAb3Fd\nhNHKWxVX4Inb8Fgp2vj4bssxNHHzDZGrIpG7cA/v12aUxdjYkgc5mW91aqPmahmA\ncKyix8dOa8p3iy6iLZBHlYhnkznmKirNGUsNee4D99utsmXUm/GjHrRjumU50bmY\nRjJ5I7vNMZekAtxciNKMJ3+EAxqeovXF3u5G4/UCgYAnF+ep/VA/fZIkb5tSxDHR\nvgkkMro5O3qgfuNQdAKJb+sf+a5S6Us+/pm6Na/cFYuga6vBKCTQDsjey5ckLpNN\nEp0E8lNWOH44fhwaB0NkH2Iw48bFO7MlheYIa6CLJEjQi1kV0/iqT1bDE2ZhQhGE\n/lAHo8euBYdN2wA0/sGTnw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "robert-frenz-bot@robertfrenz-tren.iam.gserviceaccount.com",
+  "client_id": "102211579264337685489",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/robert-frenz-bot%40robertfrenz-tren.iam.gserviceaccount.com"
+}
