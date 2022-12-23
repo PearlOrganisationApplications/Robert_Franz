@@ -46,6 +46,8 @@ class _VideoScreenState extends State<VideoScreen> {
 
 
     SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     ]);
@@ -210,10 +212,10 @@ class _VideoScreenState extends State<VideoScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
-          "Robert Franz Youtube Kanal",
-          style: TextStyle(color: Colors.black),
-        ),
+        // title: const Text(
+        //   "Robert Franz Youtube Kanal",
+        //   style: TextStyle(color: Colors.black),
+        // ),
         leading: InkWell(
           onTap: () {
             Navigator.pop(

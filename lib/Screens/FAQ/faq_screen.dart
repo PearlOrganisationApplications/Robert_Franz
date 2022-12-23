@@ -3,15 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class FAQ extends StatefulWidget {
-   const FAQ({Key? key}) : super(key: key);
+  const FAQ({Key? key}) : super(key: key);
 
   @override
   State<FAQ> createState() => _FAQState();
 }
 
 class _FAQState extends State<FAQ> {
-
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -32,27 +30,44 @@ class _FAQState extends State<FAQ> {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: const <Widget>[
-
             Padding(
-              padding: EdgeInsets.only(top:8.0,left: 8.0),
-              child: Text("Produkte",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+              padding: EdgeInsets.only(top: 8.0, left: 8.0),
+              child: Text("Produkte",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ),
             Card1(),
             Card2(),
             Card3(),
             Padding(
-              padding: EdgeInsets.only(left:8.0),
-              child: Text('Bestellung & Lieferung',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text('Bestellung & Lieferung',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ),
             Card4(),
             Card5(),
             Card6(),
             Padding(
-              padding: EdgeInsets.only(left:8.0),
-              child: Text("Robert Franz",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(
+                "Robert Franz",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
-            Card7(),// Card3(),
+            Card7(), // Card3(),
             Card8(),
+            Card9(),
+            Card10(),
+            Card11(),
+            Card12(),
+            Card13(),
+            Card14(),
+            Card15(),
+            Card16(),
+            Card17(),
+            Card18(),
+            Card19(),
+            Card20(),
+
           ],
         ),
       ),
@@ -188,11 +203,12 @@ class Card1 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,  style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -200,26 +216,6 @@ class Card1 extends StatelessWidget {
         ],
       );
     }
-
-    // buildExpanded2() {
-    //   return Column(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: <Widget>[
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
-    //           Expanded(child: buildImg(Colors.orange, 100)),
-    //         ],
-    //       ),
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
-    //           Expanded(child: buildImg(Colors.cyan, 100)),
-    //         ],
-    //       ),
-    //     ],
-    //   );
-    // }
 
     buildExpandedButton(
       String paraText,
@@ -261,8 +257,10 @@ class Card1 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expandable(
-                  collapsed: buildCollapsed1("Handelt es sich um original Robert Franz Produkte?"),
-                  expanded: buildExpanded1("Handelt es sich um original Robert Franz Produkte?\n",
+                  collapsed: buildCollapsed1(
+                      "Handelt es sich um original Robert Franz Produkte?"),
+                  expanded: buildExpanded1(
+                      "Handelt es sich um original Robert Franz Produkte?\n",
                       "Bei allen angebotenen Robert Franz Produkten handelt es sich um originale Produkte von Robert Franz Firmen. Die produzierenden Firmen von Robert Franz lauten Robert Franz Naturversand GmbH und DOGenesis GmbH."),
                 ),
                 /************************** With Image *************************/
@@ -273,8 +271,7 @@ class Card1 extends StatelessWidget {
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -286,7 +283,9 @@ class Card1 extends StatelessWidget {
                             ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -363,11 +362,12 @@ class Card2 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -436,8 +436,10 @@ class Card2 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expandable(
-                  collapsed: buildCollapsed1("Wie ist die Dosierung der Produkte?"),
-                  expanded: buildExpanded1("Wie ist die Dosierung der Produkte?\n",
+                  collapsed:
+                      buildCollapsed1("Wie ist die Dosierung der Produkte?"),
+                  expanded: buildExpanded1(
+                      "Wie ist die Dosierung der Produkte?\n",
                       "Die jeweilige Dosierung ist auf den Produkten selbst angegeben. Wir können Ihnen leider keine Dosierempfehlung geben, da wir Sie gesundheitsbezogen nicht beraten dürfen. "),
                 ),
                 /************************** With Image *************************/
@@ -448,8 +450,7 @@ class Card2 extends StatelessWidget {
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -461,7 +462,9 @@ class Card2 extends StatelessWidget {
                             ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -483,7 +486,6 @@ class Card2 extends StatelessWidget {
     );
   }
 }
-
 
 class Card3 extends StatelessWidget {
   const Card3({super.key});
@@ -539,11 +541,12 @@ class Card3 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -573,10 +576,10 @@ class Card3 extends StatelessWidget {
     // }
 
     buildExpandedButton(
-        String paraText,
-        String boldTitleText,
-        String boldSubTitle,
-        ) {
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
       return Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -612,8 +615,10 @@ class Card3 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expandable(
-                  collapsed: buildCollapsed1("Warum sind Tier-Etiketten auf den Produken abgebildet?"),
-                  expanded: buildExpanded1("Warum sind Tier-Etiketten auf den Produken abgebildet?\n",
+                  collapsed: buildCollapsed1(
+                      "Warum sind Tier-Etiketten auf den Produken abgebildet?"),
+                  expanded: buildExpanded1(
+                      "Warum sind Tier-Etiketten auf den Produken abgebildet?\n",
                       "Robert Franz verkauft seit einiger Zeit seine Produkte nur noch für Tiere. Seine Begründung können Sie in folgendem Video erfahren: https://www.youtube.com/watch?v=keVcwne6CB0"),
                 ),
                 /************************** With Image *************************/
@@ -624,8 +629,7 @@ class Card3 extends StatelessWidget {
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -634,10 +638,12 @@ class Card3 extends StatelessWidget {
                     Builder(
                       builder: (context) {
                         var controller =
-                        ExpandableController.of(context, required: true)!;
+                            ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -714,11 +720,12 @@ class Card4 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -748,10 +755,10 @@ class Card4 extends StatelessWidget {
     // }
 
     buildExpandedButton(
-        String paraText,
-        String boldTitleText,
-        String boldSubTitle,
-        ) {
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
       return Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -799,8 +806,7 @@ class Card4 extends StatelessWidget {
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -809,10 +815,12 @@ class Card4 extends StatelessWidget {
                     Builder(
                       builder: (context) {
                         var controller =
-                        ExpandableController.of(context, required: true)!;
+                            ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -834,10 +842,6 @@ class Card4 extends StatelessWidget {
     );
   }
 }
-
-
-
-
 
 class Card5 extends StatelessWidget {
   const Card5({super.key});
@@ -893,11 +897,12 @@ class Card5 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -906,31 +911,11 @@ class Card5 extends StatelessWidget {
       );
     }
 
-    // buildExpanded2() {
-    //   return Column(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: <Widget>[
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
-    //           Expanded(child: buildImg(Colors.orange, 100)),
-    //         ],
-    //       ),
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
-    //           Expanded(child: buildImg(Colors.cyan, 100)),
-    //         ],
-    //       ),
-    //     ],
-    //   );
-    // }
-
     buildExpandedButton(
-        String paraText,
-        String boldTitleText,
-        String boldSubTitle,
-        ) {
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
       return Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -966,20 +951,17 @@ class Card5 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expandable(
-                  collapsed: buildCollapsed1("Kann ich auch telefonisch bestellen?"),
-                  expanded: buildExpanded1("Kann ich auch telefonisch bestellen?\n",
+                  collapsed:
+                      buildCollapsed1("Kann ich auch telefonisch bestellen?"),
+                  expanded: buildExpanded1(
+                      "Kann ich auch telefonisch bestellen?\n",
                       "Ja, eine telefonische Bestellung ist möglich. Unter 0711 365 369 49 können Sie eine telefonische Bestellung tätigen."),
                 ),
                 /************************** With Image *************************/
-                // Expandable(
-                //   collapsed: buildCollapsed2(),
-                //   expanded: buildExpanded2(),
-                // ),
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -988,10 +970,12 @@ class Card5 extends StatelessWidget {
                     Builder(
                       builder: (context) {
                         var controller =
-                        ExpandableController.of(context, required: true)!;
+                            ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -1050,10 +1034,6 @@ class Card6 extends StatelessWidget {
       );
     }
 
-    // buildCollapsed2() {
-    //   return buildImg(Colors.lightGreenAccent, 150);
-    // }
-
     buildCollapsedButton() {
       return Container();
     }
@@ -1068,11 +1048,12 @@ class Card6 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -1081,31 +1062,11 @@ class Card6 extends StatelessWidget {
       );
     }
 
-    // buildExpanded2() {
-    //   return Column(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: <Widget>[
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
-    //           Expanded(child: buildImg(Colors.orange, 100)),
-    //         ],
-    //       ),
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
-    //           Expanded(child: buildImg(Colors.cyan, 100)),
-    //         ],
-    //       ),
-    //     ],
-    //   );
-    // }
-
     buildExpandedButton(
-        String paraText,
-        String boldTitleText,
-        String boldSubTitle,
-        ) {
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
       return Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -1141,20 +1102,17 @@ class Card6 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expandable(
-                  collapsed: buildCollapsed1("Wird eine bestehende Kundennummer/-konto für eine Bestellung benötigt?"),
-                  expanded: buildExpanded1("Wird eine bestehende Kundennummer/-konto für eine Bestellung benötigt?\n",
+                  collapsed: buildCollapsed1(
+                      "Wird eine bestehende Kundennummer/-konto für eine Bestellung benötigt?"),
+                  expanded: buildExpanded1(
+                      "Wird eine bestehende Kundennummer/-konto für eine Bestellung benötigt?\n",
                       "Sie können alle Produkte auch ohne Kundennummer bestellen."),
                 ),
                 /************************** With Image *************************/
-                // Expandable(
-                //   collapsed: buildCollapsed2(),
-                //   expanded: buildExpanded2(),
-                // ),
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -1163,10 +1121,12 @@ class Card6 extends StatelessWidget {
                     Builder(
                       builder: (context) {
                         var controller =
-                        ExpandableController.of(context, required: true)!;
+                            ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -1225,10 +1185,6 @@ class Card7 extends StatelessWidget {
       );
     }
 
-    // buildCollapsed2() {
-    //   return buildImg(Colors.lightGreenAccent, 150);
-    // }
-
     buildCollapsedButton() {
       return Container();
     }
@@ -1243,11 +1199,12 @@ class Card7 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -1256,33 +1213,11 @@ class Card7 extends StatelessWidget {
       );
     }
 
-    // buildExpanded2() {
-    //   return Column(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: <Widget>[
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
-    //           Expanded(child: buildImg(Colors.orange, 100)),
-    //         ],
-    //       ),
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
-    //           Expanded(child: buildImg(Colors.cyan, 100)),
-    //         ],
-    //       ),
-    //     ],
-    //   );
-    // }
-
     buildExpandedButton(
-        String paraText,
-        String boldTitleText,
-        String boldSubTitle,
-
-
-        ) {
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
       return Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -1291,7 +1226,6 @@ class Card7 extends StatelessWidget {
             Text(
               paraText,
               softWrap: true,
-
             ),
             RichText(
               text: TextSpan(
@@ -1324,15 +1258,10 @@ class Card7 extends StatelessWidget {
                       "Robert Franz ist ein Naturphilosoph und propagiert die natürliche Gesundheit/Heilung. Weitere Informationen über Robert Franz finden Sie hier."),
                 ),
                 /************************** With Image *************************/
-                // Expandable(
-                //   collapsed: buildCollapsed2(),
-                //   expanded: buildExpanded2(),
-                // ),
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -1341,10 +1270,12 @@ class Card7 extends StatelessWidget {
                     Builder(
                       builder: (context) {
                         var controller =
-                        ExpandableController.of(context, required: true)!;
+                            ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -1403,10 +1334,6 @@ class Card8 extends StatelessWidget {
       );
     }
 
-    // buildCollapsed2() {
-    //   return buildImg(Colors.lightGreenAccent, 150);
-    // }
-
     buildCollapsedButton() {
       return Container();
     }
@@ -1421,11 +1348,12 @@ class Card8 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  aboutTitle,style: TextStyle(fontWeight: FontWeight.w700),
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 Text(
                   aboutSubTitle,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             ),
@@ -1434,31 +1362,11 @@ class Card8 extends StatelessWidget {
       );
     }
 
-    // buildExpanded2() {
-    //   return Column(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: <Widget>[
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
-    //           Expanded(child: buildImg(Colors.orange, 100)),
-    //         ],
-    //       ),
-    //       Row(
-    //         children: <Widget>[
-    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
-    //           Expanded(child: buildImg(Colors.cyan, 100)),
-    //         ],
-    //       ),
-    //     ],
-    //   );
-    // }
-
     buildExpandedButton(
-        String paraText,
-        String boldTitleText,
-        String boldSubTitle,
-        ) {
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
       return Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -1494,20 +1402,17 @@ class Card8 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expandable(
-                  collapsed: buildCollapsed1("Kann ich eine persönliche Beratung von Robert Franz beanspruchen?"),
-                  expanded: buildExpanded1("Kann ich eine persönliche Beratung von Robert Franz beanspruchen?\n",
+                  collapsed: buildCollapsed1(
+                      "Kann ich eine persönliche Beratung von Robert Franz beanspruchen?"),
+                  expanded: buildExpanded1(
+                      "Kann ich eine persönliche Beratung von Robert Franz beanspruchen?\n",
                       "Robert Franz bietet aktuell keine persönliche Beratung an. Gesundheitsfragen können somit leider nicht beantwortet werden."),
                 ),
                 /************************** With Image *************************/
-                // Expandable(
-                //   collapsed: buildCollapsed2(),
-                //   expanded: buildExpanded2(),
-                // ),
 
                 Expandable(
                   collapsed: buildCollapsedButton(),
-                  expanded: buildExpandedButton(
-                      "","",""),
+                  expanded: buildExpandedButton("", "", ""),
                 ),
                 const Divider(height: 1),
                 Row(
@@ -1516,10 +1421,12 @@ class Card8 extends StatelessWidget {
                     Builder(
                       builder: (context) {
                         var controller =
-                        ExpandableController.of(context, required: true)!;
+                            ExpandableController.of(context, required: true)!;
                         return TextButton(
                           child: Text(
-                            controller.expanded ? "Antwort ausblenden" : "Antwort lesen",
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
                             style: Theme.of(context)
                                 .textTheme
                                 .button!
@@ -1542,77 +1449,2148 @@ class Card8 extends StatelessWidget {
   }
 }
 
+class Card9 extends StatelessWidget {
+  const Card9({super.key});
 
-// class Card3 extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     buildItem(String label) {
-//       return Padding(
-//         padding: const EdgeInsets.all(10.0),
-//         child: Text(label),
-//       );
-//     }
-//
-//     buildList() {
-//       return Column(
-//         children: <Widget>[
-//           for (var i in [1, 2, 3, 4]) buildItem("Item ${i}"),
-//         ],
-//       );
-//     }
-//
-//     return ExpandableNotifier(
-//         child: Padding(
-//       padding: const EdgeInsets.all(10),
-//       child: ScrollOnExpand(
-//         child: Card(
-//           clipBehavior: Clip.antiAlias,
-//           child: Column(
-//             children: <Widget>[
-//               ExpandablePanel(
-//                 theme: const ExpandableThemeData(
-//                   headerAlignment: ExpandablePanelHeaderAlignment.center,
-//                   tapBodyToExpand: true,
-//                   tapBodyToCollapse: true,
-//                   hasIcon: false,
-//                 ),
-//                 header: Container(
-//                   color: Colors.indigoAccent,
-//                   child: Padding(
-//                     padding: const EdgeInsets.all(10.0),
-//                     child: Row(
-//                       children: [
-//                         ExpandableIcon(
-//                           theme: const ExpandableThemeData(
-//                             expandIcon: Icons.arrow_right,
-//                             collapseIcon: Icons.arrow_drop_down,
-//                             iconColor: Colors.white,
-//                             iconSize: 28.0,
-//                             iconRotationAngle: math.pi / 2,
-//                             iconPadding: EdgeInsets.only(right: 5),
-//                             hasIcon: false,
-//                           ),
-//                         ),
-//                         Expanded(
-//                           child: Text(
-//                             "Items",
-//                             style: Theme.of(context)
-//                                 .textTheme
-//                                 .bodyText1!
-//                                 .copyWith(color: Colors.white),
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//                 collapsed: Container(),
-//                 expanded: buildList(),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     ));
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Ist eine telefonische Bestellung oder Beratung möglich?"),
+                  expanded: buildExpanded1(
+                      "Ist eine telefonische Bestellung oder Beratung möglich?\n",
+                      "Ja! Telefonische Beratungen und Bestellungen sind unter +43 664 12 10 084 möglich. Wichtig: Eine Beratung ist uns nur soweit möglich, wie es uns gesetzlich erlaubt ist! Wir dürfen und können keine Heilversprechen oder Wirkungsversprechen geben! Auch dürfen wir zu keinen gesundheitsbezogenen Themen beraten."),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card10 extends StatelessWidget {
+  const Card10({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Gibt es die Möglichkeit eine Bestellung oder Anfrage per E-Mail zu senden?"),
+                  expanded: buildExpanded1(
+                      "Gibt es die Möglichkeit eine Bestellung oder Anfrage per E-Mail zu senden?\n",
+                      "Gerne können Sie uns Ihre Bestellung oder Anfrage unter office@robert-franz-nr1.at senden."),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card11 extends StatelessWidget {
+  const Card11({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Unter welchen Öffnungszeiten ist unser Robert Franz Shop in Gleisdorf erreichbar bzw. auch besuchbar?"),
+                  expanded: buildExpanded1(
+                      "Unter welchen Öffnungszeiten ist unser Robert Franz Shop in Gleisdorf erreichbar bzw. auch besuchbar?\n",
+                      "Montag: 8:00 Uhr – 18:00 Uhr Dienstag: 8:00 Uhr – 18:00 Uhr Mittwoch: 8:00 Uhr – 18:00 Uhr Donnerstag: 8:00 Uhr - 13:00 Uhr Freitag: 8:00 Uhr – 18:00 Uhr Samstag: 8:00 Uhr – 13:00 Uhr An Sonn.- und Feiertagen geschlossen. Adresse: Robert Franz Shop Gleisdorf Schillerstraße 13/4 8200 Gleisdorf Österreich"),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card12 extends StatelessWidget {
+  const Card12({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Welche Zahlungsarten bietet unser Shop an?"),
+                  expanded: buildExpanded1(
+                      "Welche Zahlungsarten bietet unser Shop an?\n",
+                      "- Kauf auf Rechnung (für Kunden aus Österreich)  - PayPal  - Sofort Überweisung (Klarna)"),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card13 extends StatelessWidget {
+  const Card13({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(" Wie lange ist die Lieferzeit?"),
+                  expanded: buildExpanded1("Wie lange ist die Lieferzeit?\n",
+                      "- Österreich: 1-2 Werktage  - Deutschland/Italien: 2-3 Werktage Bei Sendungen in Europa beläuft sich die Lieferzeit ca. auf 3-7 Tagen.  Bestellungen bis 13.00 Uhr werden noch am gleichen Tag versendet."),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card14 extends StatelessWidget {
+  const Card14({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " In welche Länder liefern wir und wie hoch sind die Lieferkosten? Österreich:"),
+                  expanded: buildExpanded1(
+                      "In welche Länder liefern wir und wie hoch sind die Lieferkosten? Österreich:\n",
+                      "- Keine Versandkosten*  - Verpackungspauschale nur 2,90€**(siehe Beschreibung unten)  *Ausgenommen Hundefutter! Sollte Ihre Bestellung Hundefutter enthalten, werden pro 15kg Hundefutter Sack immer 2,90€ Versandkosten berechnet! Deutschland und Italien:  - 4,90 EURO Versand - Verpackungspauschale nur 2,90€**  - Innerhalb Deutschland Versandkostenfrei* ab 90,00 EURO - Innerhalb Italien Versandkostenfrei* ab 139,00 EURO *Ausgenommen Hundefutter! Sollte Ihre Bestellung Hundefutter enthalten, werden pro 5kg und 15kg Hundefutter Sack immer 6,90€ Versandkosten berechnet! Versandkosten Zone 2: Kroatien, Slowenien, Ungarn, Belgien, Tschechische Republik, Luxemburg, Niederlande, Slowakei  - 7,90 EURO Versand - Versandkostenfrei ab 139,00€ - Verpackungspauschale nur 2,90€** *Ausgenommen Hundefutter! Sollte Ihre Bestellung Hundefutter enthalten, werden pro 5kg und 15kg Hundefutter Sack immer 7,90€ Versandkosten berechnet! Versandkosten Zone 3: Dänemark, Finnland, Frankreich, Polen, Schweden  - 11,90 EURO Versand - Versandkostenfrei ab 199,00€ - Verpackungspauschale nur 2,90€** *Ausgenommen Hundefutter! Sollte Ihre Bestellung Hundefutter enthalten, werden pro 5kg und 15kg Hundefutter Sack immer 11,90€ Versandkosten berechnet! Versandkosten Zone 4: Spanien, Estland, Griechenland, Irland, Lettland, Litauen, Malta, Portugal, Zypern - 14,90 EURO Versand - Versandkostenfrei ab 219,00€ - Verpackungspauschale nur 2,90€** *Ausgenommen Hundefutter! Sollte Ihre Bestellung Hundefutter enthalten, werden pro 5kg und 15kg Hundefutter Sack immer 14,90€ Versandkosten berechnet! Innerhalb der Schweiz, England und Liechtenstein:  - 25,90 EURO Versand  - Verpackungspauschale nur 2,90€** - Versandkostenfrei* ab 499,00 EURO*Ausgenommen Hundefutter! Sollte Ihre Bestellung Hundefutter enthalten, werden pro 5kg und15kg Hundefutter Sack immer 14,90€ Versandkosten berechnet! **Warum eine Verpackungspauschale von 2,90€? Unabhängig von der Menge der bestellten Artikel. Aufwandspauschale für die Verpackung: Karton, Klebematerial, Luftpolsterfolie, Füllpapier, unser nachhaltiges Füllmaterial aus Maisstärke oder Wellpappe zum Schutz des MIRON-Violett-Glases, Adressaufkleber usw. Mindermengenzuschlag von 3,80 EURO bei einer Bestellung unter 4,60 EURO VERSAND ERFOLGT AUS ÖSTERREICH! Es wird kein kostenloser Rückversand angeboten. Satz.- und Tippfehler vorbehalten! "),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card15 extends StatelessWidget {
+  const Card15({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Sind unsere Robert Franz Produkte versiegelt?"),
+                  expanded: buildExpanded1(
+                      "Sind unsere Robert Franz Produkte versiegelt?\n",
+                      "Ja, unsere Produkte werden mit einem Siegel von unserem Shop ausgeliefert!"),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card16 extends StatelessWidget {
+  const Card16({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Ist eine Rückgabe der Produkte möglich?"),
+                  expanded: buildExpanded1(
+                      "Ist eine Rückgabe der Produkte möglich?\n",
+                      "Eine Rückgabe ist möglich. Innerhalb der nächsten 14 Tage nach Erhalt der Bestellung. Wichtig: Bei der Rückgabe muss das Produkt ungeöffnet sein und das Siegel darf nicht durchtrennt sein. Zu beachten: Wir bieten keinen kostenlosen Rückversand an. Die Kosten des Rückversand werden vom Kunden getragen. (Natürlich ausgenommen, Sie haben ein falsches oder nicht bestelltes Produkt erhalten)"),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card17 extends StatelessWidget {
+  const Card17({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Kann man Robert Franz persönlich treffen?"),
+                  expanded: buildExpanded1(
+                      "Kann man Robert Franz persönlich treffen?\n",
+                      "Man kann Robert Franz persönlich treffen, aber leider nur bei Vorträgen. Für Informationen über Vorträge, kontaktieren Sie uns gerne persönlich."),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card18 extends StatelessWidget {
+  const Card18({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed:
+                      buildCollapsed1(" Wie ist die Dosierung der Produkte?"),
+                  expanded: buildExpanded1(
+                      "Wie ist die Dosierung der Produkte?\n",
+                      "Die Dosierung steh auf das jeweilige Produkt geschrieben. Auch in den Videos von Robert Franz finden Sie Empfehlungen, wie es Robert Franz persönlich für sich dosieren würde. Wir persönlich dürfen Ihnen leider keine Dosierungsempfehlungen geben, da wir gesundheitsbezogen nicht beraten dürfen."),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card19 extends StatelessWidget {
+  const Card19({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Was können Sie tun, sollten Sie keine Antwort auf meine Frage gefunden haben?"),
+                  expanded: buildExpanded1(
+                      "Was können Sie tun, sollten Sie keine Antwort auf meine Frage gefunden haben?\n",
+                      "Gerne können Sie uns auch telefonisch unter +43 664 12 10 084, per E-Mail unter office@robert-franz-nr1.at erreichen. Oder und eine Frage in der App, im Chat stellen."),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Card20 extends StatelessWidget {
+  const Card20({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    buildImg(Color color, double height) {
+      return SizedBox(
+          height: height,
+          child: Container(
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.rectangle,
+            ),
+          ));
+    }
+
+//***************************** Title Section ****************************/
+    buildCollapsed1(String mainTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  mainTitle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildCollapsed2() {
+    //   return buildImg(Colors.lightGreenAccent, 150);
+    // }
+
+    buildCollapsedButton() {
+      return Container();
+    }
+
+    buildExpanded1(String aboutTitle, String aboutSubTitle) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  aboutTitle,
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  aboutSubTitle,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // buildExpanded2() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightGreenAccent, 100)),
+    //           Expanded(child: buildImg(Colors.orange, 100)),
+    //         ],
+    //       ),
+    //       Row(
+    //         children: <Widget>[
+    //           Expanded(child: buildImg(Colors.lightBlue, 100)),
+    //           Expanded(child: buildImg(Colors.cyan, 100)),
+    //         ],
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    buildExpandedButton(
+      String paraText,
+      String boldTitleText,
+      String boldSubTitle,
+    ) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              paraText,
+              softWrap: true,
+            ),
+            RichText(
+              text: TextSpan(
+                  text: boldTitleText,
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: boldSubTitle,
+                        style: const TextStyle(fontWeight: FontWeight.normal))
+                  ]),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        child: ScrollOnExpand(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expandable(
+                  collapsed: buildCollapsed1(
+                      " Wo finden Sie unsere Allgemeinen Geschäftsbedingungen (AGB’s)?"),
+                  expanded: buildExpanded1(
+                      "Wo finden Sie unsere Allgemeinen Geschäftsbedingungen (AGB’s)?\n",
+                      "Unsere AGB‘s finden Sie im Button des Onlineshops, wenn Sie ganz nach unten scrollen unter dem"),
+                ),
+                /************************** With Image *************************/
+                // Expandable(
+                //   collapsed: buildCollapsed2(),
+                //   expanded: buildExpanded2(),
+                // ),
+
+                Expandable(
+                  collapsed: buildCollapsedButton(),
+                  expanded: buildExpandedButton("", "", ""),
+                ),
+                const Divider(height: 1),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Builder(
+                      builder: (context) {
+                        var controller =
+                            ExpandableController.of(context, required: true)!;
+                        return TextButton(
+                          child: Text(
+                            controller.expanded
+                                ? "Antwort ausblenden"
+                                : "Antwort lesen",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.deepPurple),
+                          ),
+                          onPressed: () {
+                            controller.toggle();
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
