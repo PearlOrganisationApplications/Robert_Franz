@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:robert_franz/Screens/Notification%20Screen/notifiication.dart';
 import 'package:robert_franz/Screens/Youtube/youtube_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/platform_interface.dart';
@@ -77,10 +78,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     _widgetOptions = <Widget>[
       const WebViewScreen(),
-      const FAQ(),
+      const FAQScreen(),
       const CartScreen(),
       const ChatTawk(),
       const YoutubeHomeScreen(),
+      const NotificationScreen(),
       InkWell(
           onTap: () {
             Get.to(const MyHomePage(title: ""));
@@ -164,6 +166,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     iconActiveColor: Colors.red,
                     backgroundColor: Colors.purpleAccent.withOpacity(.5),
                     icon: FontAwesomeIcons.youtube,
+                    // text: 'Youtube',
+                  ),
+                  GButton(
+                    iconSize: 20,
+                    iconActiveColor: Colors.red,
+                    backgroundColor: Colors.purpleAccent.withOpacity(.5),
+                    icon: FontAwesomeIcons.bell,
                     // text: 'Youtube',
                   ),
                 ],
@@ -265,6 +274,26 @@ class _WebViewScreenState extends State<WebViewScreen> {
     return WillPopScope(
       onWillPop: () => _goBack(context),
       child: Scaffold(
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white,
+        //   actions: [
+        //     IconButton(
+        //         onPressed: () {
+        //           Navigator.push(
+        //               context,
+        //               MaterialPageRoute(
+        //                   builder: (context) => const NotificationScreen()));
+        //         },
+        //         icon: const Icon(
+        //           Icons.notification_add,
+        //           color: Colors.black,
+        //         ))
+        //   ],
+        //   title: const Text(
+        //     "News Screen",
+        //     style: TextStyle(color: Colors.black),
+        //   ),
+        // ),
         body: WillPopScope(
           onWillPop: () async {
             if (await _webViewController.canGoBack()) {
